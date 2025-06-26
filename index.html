@@ -147,12 +147,24 @@
 
 <!-- Footer -->
 <footer
-  class="text-center py-8 border-t text-sm transition-colors"
+  class="text-center py-8 border-t text-sm transition-colors space-y-2"
   :class="dark 
     ? 'text-gray-500 border-white/10 bg-transparent' 
     : 'text-neutral-800 border-neutral-400 bg-neutral-300'"
 >
-  © 2025 SpectrumAI. Precision. Clarity. Leadership.
+  <div>
+    © 2025 SpectrumAI. Precision. Clarity. Leadership.
+  </div>
+  <div>
+    Contact us at 
+    <a 
+      href="mailto:contact@spectrumai.io" 
+      class="underline hover:text-red-500 transition-colors"
+      :class="dark ? 'text-gray-400' : 'text-neutral-700'"
+    >
+      technolog@spectrumai.pl
+    </a>
+  </div>
 </footer>
 
 </body>
