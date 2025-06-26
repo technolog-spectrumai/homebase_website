@@ -89,7 +89,7 @@
     </p>
   </section>
 
-  <!-- Features Grid -->
+  <!-- Features -->
   <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 px-6 pb-20 max-w-6xl mx-auto text-center">
     <template x-for="feature in [
       { title: 'AI Security', desc: 'Cutting-edge defense intelligence and proactive protection.' },
@@ -103,9 +103,9 @@
         class="rounded-xl p-6 transition-shadow shadow-md flex flex-col items-center justify-center"
         :class="dark 
           ? 'bg-white/5 hover:bg-white/10 text-gray-300' 
-          : 'bg-neutral-100 hover:bg-neutral-200 text-neutral-800 border border-neutral-200'">
+          : 'bg-neutral-200 hover:bg-neutral-300 text-neutral-900 border border-neutral-300'">
         <h3 class="text-xl font-semibold mb-2" x-text="feature.title"></h3>
-        <p :class="dark ? 'text-gray-400' : 'text-neutral-600'" x-text="feature.desc"></p>
+        <p :class="dark ? 'text-gray-400' : 'text-neutral-700'" x-text="feature.desc"></p>
       </div>
     </template>
   </section>
@@ -114,28 +114,29 @@
   <section id="portfolio" class="py-24 text-center"
     :class="dark 
       ? 'bg-gradient-to-b from-gray-950 to-gray-900 text-white' 
-      : 'bg-neutral-100 text-neutral-800'">
+      : 'bg-neutral-200 text-neutral-900'">
     <div class="max-w-6xl mx-auto px-4">
       <h2 class="text-4xl font-bold mb-4">Portfolio</h2>
-      <p class="mb-16 text-lg" :class="dark ? 'text-gray-400' : 'text-neutral-600'">
+      <p class="mb-16 text-lg" :class="dark ? 'text-gray-400' : 'text-neutral-700'">
         We proudly invest in bold ventures redefining autonomy and intelligence. Meet Basilisk Systems.
       </p>
 
       <a href="https://basilisk-systems.netlify.app/" target="_blank" rel="noopener noreferrer">
-        <div :class="dark ? 'bg-gray-900' : 'bg-white'" 
+        <div :class="dark ? 'bg-gray-900' : 'bg-neutral-100'" 
              class="rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition max-w-5xl mx-auto">
-          <div class="relative h-72 bg-cover bg-center" 
-               style="background-image: url('https://i.ibb.co/1f0q6Nzy/banner-basilisk.png');">
+          <div class="relative h-72 bg-cover bg-center" :class="dark 
+    ? 'bg-[url(https://i.ibb.co/1f0q6Nzy/banner-basilisk.png)]' 
+    : 'bg-[url(https://i.ibb.co/ycWmMndL/basilisk-light.png)]'">
             <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
-              <h3 class="text-3xl font-bold text-indigo-400">Basilisk Systems</h3>
+              <h3 class="text-3xl font-bold" :class="dark ? 'text-indigo-400' : 'text-neutral-100'">Basilisk Systems</h3>
             </div>
           </div>
           <div class="p-6 text-left">
-            <h4 class="text-2xl font-semibold mb-2" :class="dark ? 'text-white' : 'text-neutral-800'">Smarter Skies Begin Here</h4>
+            <h4 class="text-2xl font-semibold mb-2" :class="dark ? 'text-white' : 'text-neutral-900'">Smarter Skies Begin Here</h4>
             <p class="mb-4" :class="dark ? 'text-gray-400' : 'text-neutral-700'">
               Autonomous drone transport built on vision, security, and relentless innovation—from defense-ready platforms to cloud-integrated navigation.
             </p>
-            <span class="inline-block text-indigo-400 font-semibold hover:underline">Visit Website →</span>
+            <span class="inline-block font-semibold hover:underline" :class="dark ? 'text-indigo-400' : 'text-indigo-900'">Visit Website →</span>
           </div>
         </div>
       </a>
